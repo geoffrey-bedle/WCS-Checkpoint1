@@ -74,9 +74,9 @@ include '../includes/formValidation.php';
 
 
 </section>
-<section>
+<section class="form">
 
-    <h1>Ajouter un contact</h1>
+    <h2>Ajouter un contact</h2>
     <form method="post" action="index.php">
         <div class="form-group">
             <label for="firstname">Prénom :</label>
