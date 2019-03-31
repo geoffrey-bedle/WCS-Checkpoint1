@@ -1,7 +1,7 @@
 <?php
 
 require '_connect.php';
-$pdo = new PDO(DSN, USER);
+$pdo = new PDO(DSN, USER,PASS);
 ?>
 <!doctype html>
 <html lang="fr">
