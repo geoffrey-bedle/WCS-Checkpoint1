@@ -1,6 +1,7 @@
 <?php
 
 $errors = [];
+$succesMessage = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST['firstname'])) {
@@ -22,13 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $post[$key] = htmlspecialchars($data);
 
         }
-        $query = "INSERT INTO contact  VALUES (null, :firstname, :lastname, :civility);";
+        $query = "INSERT INTO contact  VALUES (null, :lastname, :firstname, :civility);";
         $insert = $pdo->prepare($query);
         $insert->bindParam(":firstname", $post["firstname"]);
         $insert->bindParam(':lastname', $post['lastname']);
         $insert->bindParam(':civility', $post['civility']);
         $insert->execute();
-        $post[]=null;
+        $post[] = null;
+        $succesMessage = ' <div class="alert alert-success succes-message" role="alert">Votre contact a bien été ajouté</div>';
     }
 
 

@@ -1,16 +1,29 @@
-form{
+form {
     width: 50%;
     margin: auto;
-}
-.form{
     margin-top: 150px;
 }
-h2{
+
+.form {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.form button {
+    margin-top: 30px;
+}
+
+h2 {
     text-align: center;
 }
 
-table{
+.table {
     width: 50%;
     margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
+.succes-message {
+    margin-top: 30px;
+}
